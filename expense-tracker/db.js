@@ -3,6 +3,19 @@ const dbName =
 
 const mongoose = require("mongoose");
 
+const expenseSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  amount: {
+    type: Number,
+    required: true,
+  },
+});
+
+const Expense = mongoose.model("Expense", expenseSchema);
+
 const db = async () => {
   try {
     await mongoose.connect(dbName);
@@ -13,4 +26,4 @@ const db = async () => {
   }
 };
 
-module.exports = { db };
+module.exports = { db, Expense };
