@@ -4,8 +4,8 @@
   "description": "CD/CI demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon db.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,10 @@
     "mongoose": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "@shelf/jest-mongodb": "^4.2.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0"
   }
 }
