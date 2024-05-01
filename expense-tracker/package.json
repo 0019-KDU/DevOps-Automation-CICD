@@ -4,13 +4,14 @@
   "description": "CD/CI demo",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon db.js",
-    "test": "jest"
+    "start": "node db.js",
+    "dev": "nodemon -L db.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2"

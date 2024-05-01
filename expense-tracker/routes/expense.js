@@ -2,6 +2,10 @@ var express = require("express");
 const router = express.Router();
 const Expense = require("../models/expense");
 
+router.get("/test", (req, res) => {
+  res.json({ message: "GET request to the /api/test endpoint" });
+});
+
 router.get("/expenses", async (req, res) => {
   console.log("Received GET /expenses request");
   try {

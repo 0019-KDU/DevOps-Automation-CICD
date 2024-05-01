@@ -18,6 +18,7 @@ afterEach(async () => {
   }
 });
 
+//!GET Api test
 test("GET /api/expenses without query parameters returns all expenses", async () => {
   // console.log("Cleaning up existing data...");
   // await Expense.deleteMany({}); // Ensure the database is clean
@@ -51,6 +52,8 @@ test("GET /api/expenses/:id returns an expense when given a valid ID", async () 
   expect(response.body.data.name).toBe("Test Expense");
   expect(response.body.data.amount).toBe(100);
 });
+
+//!POST Api test
 test("POST /api/expenses creates a new expense", async () => {
   const data = { name: "test expense", amount: 150 };
 
@@ -71,6 +74,8 @@ test("POST /api/expenses creates a new expense", async () => {
   expect(expense.name).toBe(data.name);
   expect(expense.amount).toBe(data.amount);
 });
+
+//!PUT Api test
 test("PUT /api/expenses/:id updates an existing expense", async () => {
   // Create an expense to update
   const initialExpense = await Expense.create({
@@ -93,6 +98,8 @@ test("PUT /api/expenses/:id updates an existing expense", async () => {
   expect(updatedExpense.name).toBe("Updated Expense"); // Verify the updated name
   expect(updatedExpense.amount).toBe(200); // Verify the updated amount
 });
+
+//!DELETE Api test
 test("DELETE /api/expenses/:id deletes an expense", async () => {
   // Create an expense to delete
   const newExpense = await Expense.create({
