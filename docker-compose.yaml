@@ -10,6 +10,7 @@ services:
 
   api:
     build: .
+    image: chiradev/cicd:latest
     ports:
       - 5000:3000
     volumes:

@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // Use async/await instead of callbacks in `beforeEach` and `afterEach`
 beforeEach(async () => {
   await mongoose.connect(
-    "mongodb+srv://chirantha:12345u@cluster0.xcmczoo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://chirantha:chirapass@cluster0.xcmczoo.mongodb.net/expense-tracker?retryWrites=true&w=majority&appName=Cluster0",
     { useNewUrlParser: true, useUnifiedTopology: true }
   );
 });
